@@ -2,19 +2,19 @@
 
 ### Create a new repository on the command line
 
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main    //M => move or rename branch name 
-git remote add origin https://github.com/stharavi01/gitTutorial.git
+git init </br>
+git add README.md </br>
+git commit -m "first commit" </br>
+git branch -M main    //M => move or rename branch name  </br>
+git remote add origin https://github.com/stharavi01/gitTutorial.git </br>
 git push -u origin main //u => set up tracking relationship between local main branch and remote main branch on the origin repository
 
 
 ### Push an existing repository from the command line
 
-git remote add origin https://github.com/stharavi01/gitTutorial.git
-git branch -M main
-git push -u origin main
+git remote add origin https://github.com/stharavi01/gitTutorial.git </br>
+git branch -M main </br>
+git push -u origin main </br>
 
 
 ### Clone a Repository
@@ -67,6 +67,10 @@ git checkout <branch-name>
 
 git checkout -b <new-branch-name>
 
+
+### Delete a branch
+git branch -d <branch-name> // use -D if you want to delete even when not merged
+
 ### Merge Branches
 
 git merge <branch-to-merge>
@@ -87,6 +91,7 @@ git push origin <branch-name>
 ### Fetch Changes from a Remote Repository (Without Merging)
 
 git fetch origin
+git merge / git rebase
 
 
 ### View Remote Repositories
@@ -95,6 +100,23 @@ git remote -v
 
 
 ## Advanced Operations
+
+### Rebase ( integrating changes from one branch onto another preserving the commits. )
+//For example, consider a situation where the main branch has progressed since you started working on a feature branch. You want to get the latest updates to the main branch in your feature branch, but you want to keep your branch's history clean so it appears as if you've been working off the latest main branch. This gives the later benefit of a clean merge of your feature branch back into the main branch.
+
+The primary purpose of git rebase is to maintain a cleaner and more linear commit history compared to other history-altering commands like git merge
+
+### Merge directly or rebase and then merge
+
+git rebase <base-branch> (<base-branch> is the branch you want to rebase onto.)
+
+Let's say you have a feature branch feature_branch with several commits, and you want to rebase it onto the main branch:
+# Assuming you are on the feature_branch
+git checkout feature_branch
+
+# Rebasing onto the main branch
+git rebase main
+
 
 ### Remove a File from the Staging Area
 
@@ -108,8 +130,12 @@ git stash save "message" (provide message to stash)
 
 
 ### Undoing Changes
-git revert commit hash (create a new commit that undoes the changes made in a previous commit.)
-git revert HEAD (undo most recent changes)
+git revert commit hash (create a new commit that undoes the changes made in a previous commit.)</br>
+git revert HEAD (undo most recent changes)</br>
+git add . </br>
+git commit -m "sucessfully reverted" </br>
+git push origin main </br>
+
 git revert --continue
 git revert --abort
 
