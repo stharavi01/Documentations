@@ -1,3 +1,3 @@
-I mistakenly deleted some files now I want them back.
-
-I made some changes which i don't want.
+I made a change to a file 1 
+I made a change to file 2
+I want to revert the changes.
