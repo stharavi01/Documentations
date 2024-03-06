@@ -5,9 +5,9 @@
 git init
 git add README.md
 git commit -m "first commit"
-git branch -M main    (M => move or rename branch name )
+git branch -M main    //M => move or rename branch name 
 git remote add origin https://github.com/stharavi01/gitTutorial.git
-git push -u origin main (u => set up tracking relationship between local main branch and remote main branch on the origin repository)
+git push -u origin main //u => set up tracking relationship between local main branch and remote main branch on the origin repository
 
 
 ### Push an existing repository from the command line
@@ -22,11 +22,6 @@ git push -u origin main
 git clone <repository-url>
 
 
-### Check Repository Status
-
-git status
-
-
 ### Stage Changes
 
 git add <file>
@@ -37,9 +32,23 @@ git add <file>
 git commit -m "Your commit message"
 
 
+### Check Repository Status
+
+git status // shows the staging area ie status of the repository
+
+
 ### View Commit History
 
-git log
+git log  // commit hash, author,date, and commit message
+// press q and enter to exit from logs
+
+
+### Temporarily saving the changes and can reapply them later
+
+
+git stash (it saves the staged changes but will ignore unstaged files)
+
+git stash apply (you can apply the stashed changes to multiple branches )
 
 
 ## Branching
@@ -92,9 +101,21 @@ git remote -v
 git reset <file>
 
 
+### Git Stash
+git stash -u (adds untracked changes as well)
+
+git stash save "message" (provide message to stash)
+
+
+### Undoing Changes
+git revert commit hash (create a new commit that undoes the changes made in a previous commit.)
+git revert HEAD (undo most recent changes)
+git revert --continue
+git revert --abort
+
 ### Discard Changes in a File
 
-git checkout -- <file>
+git checkout -- <file> (move the head and branch ref pointer to a specified commit)
 
 
 ### Resolve Merge Conflicts
