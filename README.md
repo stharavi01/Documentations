@@ -70,6 +70,8 @@ git checkout -b <new-branch-name>
 
 ### Delete a branch
 git branch -d <branch-name> // use -D if you want to delete even when not merged
+git push origin --delete wdR // delete a remote branch
+
 
 ### Merge Branches
 
