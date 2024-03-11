@@ -124,12 +124,12 @@ git reset <file>
 
 ### merge and rebase 
 
-git checkout your_branch  //Checkout the branch you want to update:
-git merge --rebase main  //Merge changes from another branch (main) using rebase:
-git add <conflicted_file>  //Resolve conflicts if they occur during the rebase:
-git rebase --continue 
-git commit -m "Merge changes from main using rebase" // Complete the merge-rebase:
-git push origin your_branch //Push the changes to the remote repository:
+git checkout your_branch  //Checkout the branch you want to update: </br>
+git merge --rebase main  //Merge changes from another branch (main) using rebase: </br>
+git add <conflicted_file>  //Resolve conflicts if they occur during the rebase: </br>
+git rebase --continue  </br>
+git commit -m "Merge changes from main using rebase" // Complete the merge-rebase: </br>
+git push origin your_branch //Push the changes to the remote repository: </br>
 
 
 
